@@ -1,0 +1,70 @@
+---
+  import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="List Data Pasien">
+  <div class="max-w-[1920px] w-full p-10 mt-20 flex flex-col max-md:p-5">
+    <h1 class="text-4xl text-teal-300 max-sm:text-3xl">List Data Pasien</h1>
+
+    <div class="flex min-[768px]:items-center w-full mt-10 max-md:mt-5 max-md:flex-col justify-start">
+    <div id="search-field-container" class="flex flex-row items-center w-full max-w-[1000px] justify-center min-[768px]:mr-5 gap-5 max-md:mb-5">
+        <input type="text" id="search-bar" placeholder="Masukan Nama Pasien" class="bg-transparent rounded-md w-full py-3 px-5 border-2 border-teal-200 placeholder:text-teal-400 placeholder:text-lg focus:outline-teal-300 text-lg max-sm:placeholder:text-sm max-sm:text-sm text-teal-400">
+        <button id="search-button" class="rounded-full bg-teal-100 flex justify-center items-center w-full max-w-[55.2px] h-[55.2px] max-md:max-w-[47px] max-md:max-h-[47px] transition ease-in-out delay-100 duration-150 hover:bg-opacity-80 hover:shadow-md active:scale-95"><span class="material-symbols-outlined text-2xl">search</span></button>
+    </div>
+
+      <div id="button-sort" class="flex gap-3">
+        <button id="alpha-sorting-btn" class="bg-teal-300 opacity-8 whitespace-nowrap text-xs py-2 px-3 rounded-full text-teal-600 max-sm:px-2 flex items-center transition ease-in-out delay-100 duration-150 hover:bg-opacity-80 hover:shadow-md active:scale-95">A-Z</span></button>
+        <button id="inout-sorting-btn" class="bg-teal-300 py-2 px-3 whitespace-nowrap text-xs rounded-full text-teal-600 flex items-center max-md:py-1 max-md:px-2 transition ease-in-out delay-100 duration-150 hover:bg-opacity-80 hover:shadow-md active:scale-95">Masuk / Keluar</button>
+        <button id="reset-sorting-btn" class="bg-teal-300 py-2 px-3 whitespace-nowrap text-xs rounded-full text-teal-600 max-md:py-1 max-md:px-2 transition ease-in-out delay-100 duration-150 hover:bg-opacity-80 hover:shadow-md active:scale-95">Reset</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="justify-center w-full max-w-[1920px] mb-20">
+      <table class="border-[1px] border-teal-50 w-full">
+          <thead class="bg-teal-50 w-full ">
+              <tr>
+                  <th class="font-normal border-2 border-teal-50 py-4 text-xs text-teal-700 bg-teal-300 max-md:p-2 max-sm:max-w-[70px] truncate ...">
+                      No
+                  </th>
+                  <th class="font-normal border-2 border-teal-50 p-4 text-xs text-teal-700 bg-teal-300 max-md:p-2 max-sm:max-w-[70px] truncate ...">
+                      Nama
+                  </th>
+                  <th class="font-normal border-2 border-teal-50 p-4 text-xs text-teal-700 bg-teal-300 max-md:p-2 max-sm:max-w-[40px] truncate ...">
+                      No. Registrasi
+                  </th>
+                  <th class="font-normal border-2 border-teal-50 p-4 text-xs text-teal-700 bg-teal-300 max-lg:hidden max-sm:max-w-[70px] truncate ...">
+                      Dokter
+                  </th>                  
+                  <th class="font-normal border-2 border-teal-50 p-4 text-xs text-teal-700 bg-teal-300 max-lg:hidden max-sm:max-w-[70px] truncate ...">
+                      Diagnosa
+                  </th>
+                  <th class="font-normal border-2 border-teal-50 p-4 text-xs text-teal-700 bg-teal-300 max-lg:hidden max-sm:max-w-[70px] truncate ...">
+                      Tanggal Masuk
+                  </th>
+                  <th class="font-normal border-2 border-teal-50 p-4 text-xs text-teal-700 bg-teal-300 max-lg:hidden max-sm:max-w-[70px] truncate ...">
+                      Tanggal Keluar
+                  </th>
+                  <th class="font-normal border-2 border-teal-50 w-20 py-4 text-xs text-teal-700 bg-teal-300 max-md:p-2 max-sm:max-w-[70px] truncate ...">
+                      Update
+                  </th>
+                  <th class="font-normal border-2 border-teal-50 w-20 py-4 text-xs text-teal-700 bg-teal-300 max-md:p-2 max-sm:max-w-[70px] truncate ...">
+                      Delete
+                  </th>
+              </tr>
+          </thead>
+          <tbody id="tbody-list-pasien" class="bg-teal-50 divide-y divide-teal-300">
+
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
+    </tbody>
+  </table>
+</MainLayout>
+
+<script>
+    import "../scripts/list_data.js";
+</script>

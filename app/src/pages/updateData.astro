@@ -1,0 +1,198 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Edit Data">
+  <div id="container" class="w-full p-10 mb-10 mt-20 max-md:p-0">
+    <form
+      class="w-full max-w-4xl p-10 border-2 border-teal-300 text-teal-800 text-md mx-auto max-md:p-5"
+    >
+      <div>
+        <h1 class="text-teal-300 text-4xl pb-10 mt-5 max-sm:3xl">Edit Data</h1>
+      </div>
+
+      <div class="p-5 max-sm:text-sm max-md:p-2">
+        <label class="">Nama:</label><br />
+        <input
+          type="text"
+          name="nama"
+          id="nama"
+          placeholder="Masukan Nama"
+          class="p-3 my-5 w-full border-2 border-teal-200 placeholder:text-teal-300 focus:outline-teal-300 text-teal-300"
+        /><br />
+        <br />
+
+        <label>Tanggal Lahir:</label><br />
+        <input
+          type="date"
+          name="tanggal_lahir"
+          id="tanggal_lahir"
+          class="p-3 my-5 w-full border-2 border-teal-200 placeholder:text-teal-300 focus:outline-teal-300 text-teal-400"
+        /><br />
+        <br />
+
+        <label>Pekerjaan:</label><br />
+        <input
+          type="text"
+          name="pekerjaan"
+          id="pekerjaan"
+          placeholder="Pekerjaan Pasien"
+          class="p-3 my-5 w-full border-2 border-teal-200 placeholder:text-teal-300 focus:outline-teal-300 text-teal-400"
+        /><br />
+        <br />
+
+        <label>Jenis Kelamin:</label><br />
+        <div class="px-3 my-5 w-full">
+          <input
+            type="radio"
+            name="jenis_kelamin"
+            id="jenis_kelamin"
+            value="laki-laki"
+            class="mr-3"
+          /> Laki-laki <br />
+          <input
+            type="radio"
+            name="jenis_kelamin"
+            id="jenis_kelamin"
+            value="perempuan"
+            class="mr-3"
+          /> Perempuan <br />
+        </div>
+        <br />
+
+        <label>Status Perkawinan:</label><br />
+        <div class="px-3 my-5 w-full">
+          <input
+            type="radio"
+            name="status_perkawinan"
+            id="status_perkawinan"
+            value="kawin"
+            class="mr-3"
+          /> Kawin <br />
+          <input
+            type="radio"
+            name="status_perkawinan"
+            id="status_perkawinan"
+            value="lajang"
+            class="mr-3"
+          /> Lajang <br />
+        </div>
+        <br />
+
+        <label>Alamat:</label><br />
+        <input
+          type="text"
+          name="alamat"
+          id="alamat"
+          placeholder="Masukan Alamat"
+          class="p-3 my-5 w-full border-2 border-teal-200 placeholder:text-teal-300 focus:outline-teal-300 text-teal-400"
+        /><br />
+        <br />
+
+        <label>No. Register:</label><br />
+        <input
+          type="number"
+          name="no_registrasi"
+          id="no_registrasi"
+          placeholder="Masukan No. Registrasi"
+          class="p-3 my-5 w-full border-2 border-teal-200 placeholder:text-teal-300 focus:outline-teal-300 text-teal-400"
+        /><br />
+        <br />
+
+        <label>Dokter:</label>
+        <input
+          type="text"
+          name="nama_dokter"
+          id="nama_dokter"
+          placeholder="Nama Dokter"
+          class="p-3 my-5 w-full border-2 border-teal-200 placeholder:text-teal-300 focus:outline-teal-300 text-teal-400"
+        /><br />
+        <br />
+
+        <label>Diagnosa:</label>
+        <input
+          type="text"
+          name="diagnosa"
+          id="diagnosa"
+          placeholder="Diagnosa"
+          class="p-3 my-5 w-full border-2 border-teal-200 placeholder:text-teal-300 focus:outline-teal-300 text-teal-400"
+        /><br />
+        <br />
+
+        <label>Jenis Pelayanan:</label><br />
+        <select
+          name="pelayanan"
+          id="pelayanan"
+          class="p-3 my-5 w-full border-2 border-teal-200 placeholder:text-teal-300 focus:outline-teal-300 text-teal-400"
+        >
+          <option id="option_pelayanan" value="Rawat Inap">Rawat Inap</option>
+          <option id="option_pelayanan" value="Rawat Jalan">Rawat Jalan</option>
+          <option id="option_pelayanan" value="Konsultasi">Konsultasi</option>
+        </select>
+        <br /><br />
+
+        <label>Tanggal Masuk:</label><br />
+        <input
+          type="date"
+          name="tanggal_masuk"
+          id="tanggal_masuk"
+          class="p-3 my-5 w-full border-2 border-teal-200 placeholder:text-teal-300 focus:outline-teal-300 text-teal-400"
+        /><br />
+        <br />
+
+        <label>Tanggal Keluar:</label><br />
+        <input
+          type="date"
+          name="tanggal_keluar"
+          id="tanggal_keluar"
+          class="p-3 my-5 w-full border-2 border-teal-200 placeholder:text-teal-300 focus:outline-teal-300 text-teal-400"
+        /><br />
+        <br />
+
+        <label>Ruangan:</label><br />
+        <select
+          name="ruangan"
+          id="ruangan"
+          class="p-3 my-5 w-full border-2 border-teal-200 placeholder:text-teal-300 focus:outline-teal-300 text-teal-400"
+        >
+          <option id="option_ruangan" value="A.115">A.115</option>
+          <option id="option_ruangan" value="A.113">A.113</option>
+          <option id="option_ruangan" value="B.101">B.101</option>
+          <option id="option_ruangan" value="C.201">C.201</option>
+          <option id="option_ruangan" value="C.202">C.202</option>
+          <option id="option_ruangan" value="-">-</option>
+        </select>
+        <br /><br />
+
+        <label>Biaya:</label>
+        <input
+          type="number"
+          name="biaya"
+          id="biaya"
+          placeholder="Biaya"
+          class="p-3 my-5 w-full border-2 border-teal-200 placeholder:text-teal-300 focus:outline-teal-300 text-teal-400"
+        />
+        <br />
+      </div>
+
+      <div class="flex justify-end gap-4 pr-5 max-md:pr-2 max-sm:gap-2">
+        <button
+          id="update-button"
+          class="px-5 py-2 mt-10 mb-5 rounded-full bg-teal-300 text-teal-50 text-md tracking-wide max-md:text-sm max-md:py-2 transition ease-in-out delay-100 duration-150 hover:shadow-md active:scale-95"
+          >Edit</button
+        >
+        <button
+          id="pdf-button"
+          class="pl-4 pr-5 py-2 mt-10 mb-5 rounded-full bg-teal-300 text-teal-50 text-md tracking-wide flex items-center max-md:text-sm max-md:pl-3 max-sm:pr-4 max-md:py-2 transition ease-in-out delay-100 duration-150 hover:shadow-md active:scale-95"
+          ><span class="material-symbols-outlined mr-2">download</span
+          >PDF</button
+        >
+      </div>
+    </form>
+  </div>
+</MainLayout>
+
+<script>
+  import "../scripts/update_data.js";
+  import "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js";
+</script>

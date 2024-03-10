@@ -1,0 +1,6 @@
+app/src/scripts/add_data.js
+app/src/scripts/html2pdf.js
+app/src/scripts/index.js
+app/src/scripts/list_data.js
+app/src/scripts/update_data.js
+app/.gitignore

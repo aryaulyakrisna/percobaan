@@ -1,0 +1,18 @@
+---
+	import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Rekam Medis | Informatika Kesehatan" script="../scripts/homeStyle">
+	<div class="h-screen w-full flex flex-col justify-center items-center -m-10">
+		<p class="text-center max-w-[900px] mb-10 text-3xl font-light text-teal-900 leading-[48px] max-sm:text-xl max-md:text-2xl">Aplikasi Rekam Medis adalah aplikasi yang digunakan untuk menyimpan dan mengelola catatan medis pasien secara elektronik. </p>
+		<div id="search-field-container" class="flex flex-row items-center justify-center w-full max-md:px-5">
+			<input type="text" id="search-bar" placeholder="Masukan Nama Pasien" class="bg-transparent rounded-md w-full max-w-[500px] p-5 mr-5 my-5 border-2 border-teal-200 placeholder:text-teal-600 placeholder:text-xl focus:outline-teal-300 text-xl text-teal-600 max-md:text-sm max-md:placeholder:text-sm">
+			<button id="search-button" class="rounded-full bg-teal-100 w-full h-full max-w-[70px] max-h-[70px] flex items-center justify-center max-md:max-w-[56px] max-md:max-h-[56px] transition ease-in-out delay-100 duration-150 hover:bg-opacity-80 hover:shadow-md active:scale-95"><a href="./listData"><span class="material-symbols-outlined text-3xl max-md:text-2xl">search</span></a></button>
+		</div>
+	</div>
+
+</MainLayout>
+
+<script>
+	import "../scripts/index.js";
+</script>
